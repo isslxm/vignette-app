@@ -1,13 +1,28 @@
+// screens/HomeScreen.js
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import MediaGallery from '../Components/MediaGallery';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = () => {
   return (
-    <View>
-      <Text>Добро пожаловать в VignetteApp!</Text>
-      <Button title="Перейти к галерее" onPress={() => navigation.navigate('Gallery')} />
+    <View style={styles.container}>
+      <Text style={styles.title}>Media Gallery</Text>
+      <MediaGallery />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+});
 
 export default HomeScreen;
