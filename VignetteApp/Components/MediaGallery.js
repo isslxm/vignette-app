@@ -4,11 +4,10 @@ import { FlatList, StyleSheet } from 'react-native';
 import ImageGallery from './ImageGallery';
 import VideoPlayer from './VideoPlayer';
 
-// Используем require для загрузки локальных файлов
 const mediaData = [
-  { id: '1', type: 'image', uri: require('../assets/images/photo1.jpg') },
+  { id: '1', type: 'image', uri: require('../assets/images/photo3.jpg') },
   { id: '2', type: 'video', uri: require('../assets/videos/video1.mp4') },
-  { id: '3', type: 'image', uri: require('../assets/images/photo2.jpg') },
+  { id: '3', type: 'image', uri: require('../assets/images/photo3.jpg') },
 ];
 
 const MediaGallery = () => {
@@ -32,6 +31,7 @@ const MediaGallery = () => {
 
 const styles = StyleSheet.create({
   gallery: {
+    paddingHorizontal: 10,
     alignItems: 'center',
   },
 });

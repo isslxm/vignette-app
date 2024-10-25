@@ -13,12 +13,15 @@ const ImageGallery = ({ uri }) => {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    marginBottom: 10,
+    marginBottom: 15,
+    borderWidth: 2,
+    borderColor: '#ccc',
+    borderRadius: 10,
+    overflow: 'hidden',
   },
   image: {
     width: 300,
     height: 300,
-    borderRadius: 10,
   },
 });
 
