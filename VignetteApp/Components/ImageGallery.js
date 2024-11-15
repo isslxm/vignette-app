@@ -1,6 +1,7 @@
-// components/ImageGallery.js
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, Dimensions } from 'react-native';
+
+const {width, height} = Dimensions.get('window');
 
 const ImageGallery = ({ uri }) => {
   return (
@@ -12,16 +13,15 @@ const ImageGallery = ({ uri }) => {
 
 const styles = StyleSheet.create({
   container: {
+    width: width,
+    height: height * 0.6,
+    justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 15,
-    borderWidth: 2,
-    borderColor: '#ccc',
-    borderRadius: 10,
-    overflow: 'hidden',
+    backgroundColor: '#000',
   },
   image: {
-    width: 300,
-    height: 300,
+    width: '100%',
+    height: '100%',
   },
 });
 

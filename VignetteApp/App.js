@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, ScrollView } from 'react-native';
 import ProfileCardCarousel from './Components/ProfileCardCarousel';

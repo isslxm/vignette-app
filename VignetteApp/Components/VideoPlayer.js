@@ -1,4 +1,3 @@
-// components/VideoPlayer.js
 import React, { useState } from 'react';
 import { View, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import { Video } from 'expo-av';

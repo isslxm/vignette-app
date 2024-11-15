@@ -1,38 +1,26 @@
 // components/MediaGallery.js
 import React from 'react';
-import { FlatList, StyleSheet } from 'react-native';
+import { ScrollView, View, StyleSheet } from 'react-native';
 import ImageGallery from './ImageGallery';
-import VideoPlayer from './VideoPlayer';
-
-const mediaData = [
-  { id: '1', type: 'image', uri: require('../assets/images/photo3.jpg') },
-  { id: '2', type: 'video', uri: require('../assets/videos/video1.mp4') },
-  { id: '3', type: 'image', uri: require('../assets/images/photo3.jpg') },
-];
+// import VideoPlayer from './VideoPlayer';
 
 const MediaGallery = () => {
-  const renderItem = ({ item }) => {
-    return item.type === 'image' ? (
-      <ImageGallery uri={item.uri} />
-    ) : (
-      <VideoPlayer uri={item.uri} />
-    );
-  };
-
   return (
-    <FlatList
-      data={mediaData}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.id}
-      contentContainerStyle={styles.gallery}
-    />
+    <ScrollView contentContainerStyle={styles.container}>
+      <ImageGallery uri={require('../assets/images/photo5.jpg')} />
+      <ImageGallery uri={require('../assets/images/photo5.jpg')} />
+      <ImageGallery uri={require('../assets/images/photo5.jpg')} />
+
+      {/* <VideoPlayer uri={require('../assets/videos/video1.mp4')} />
+      <VideoPlayer uri={require('../assets/videos/video2.mp4')} /> */}
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  gallery: {
-    paddingHorizontal: 10,
+  container: {
     alignItems: 'center',
+    paddingBottom: 20,
   },
 });
 

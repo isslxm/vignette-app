@@ -1,4 +1,3 @@
-// components/ProfileCardCarousel.js
 import React from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import ProfileCard from './ProfileCard';
@@ -7,19 +6,19 @@ const profiles = [
   {
     id: '1',
     imageUri: require('../assets/images/photo3.jpg'),
-    name: 'John Doe',
+    name: 'John Kannedy',
     quote: 'Quote 1',
   },
   {
     id: '2',
     imageUri: require('../assets/images/photo3.jpg'),
-    name: 'Jane Smith',
+    name: 'Will Smith',
     quote: 'Quote 2',
   },
   {
     id: '3',
     imageUri: require('../assets/images/photo3.jpg'),
-    name: 'Alice Johnson',
+    name: 'Bob Johnson',
     quote: 'Quote 3',
   },
 ];
